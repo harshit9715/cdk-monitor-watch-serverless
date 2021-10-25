@@ -12,6 +12,7 @@
   "dependencies": {
     "aws-embedded-metrics": "^2.0.4",
     "aws-xray-sdk": "^3.3.3",
+    "lambda-multipart-parser": "^1.0.1",
     "uuid": "^8.3.2"
   }
 }
