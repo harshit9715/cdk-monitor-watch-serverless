@@ -9,7 +9,7 @@ This is a POC application that is deployed for testing monitoring various server
 - DynamoDb Table
 - A Static Website in S3 bucket (public)
 - API Gateway
-- CLoudwatch Dashboard with multiple widgets
+- Cloudwatch Dashboard with multiple widgets
 
 ## Architecture
 
