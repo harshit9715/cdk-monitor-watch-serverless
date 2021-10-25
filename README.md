@@ -44,7 +44,37 @@ Lambda Insights and custom metric collection is built into the applcation. Layer
 - Image Label deletection using AWS Rekognition
 - Dynamodb Single Table design and Item Overloading
 
+## Usage
+
+create a .env file inside the frontend directory and populate the env variables as mentioned in envschema
+REACT_APP_BACKEND parameter is populated from the output after the CDK app is deployed.
+
+### Deploy the Backend
+
+The app will use configured AWS CLI creds, you can change the behavior by modifying bin/cdk-watch.js file.
+
+- `cdk synth`            emits the synthesized CloudFormation template (builds the backend and validates it)
+- `cdk diff`             compare deployed stack with current state
+- `cdk deploy`           deploy this stack to your default AWS account/region
+
+```bash
+npm i
+cdk synth
+cdk deploy
+```
+
+### Deploying the Frontend
+
+```bash
+cd frontend/
+npm i
+# copy the API gateway base URL from backend output to .env file
+npm run build
+npm run deploy
+```
+
 ## W.I.P
 
-- Cognito Auth for frontend
+- Cognito Auth for frontend and user traffic collection.
 - SQS in between s3 trigger and recognition worker lambda to support fan-out.
+- Adding other possible usecases like dynamodb streams, Async APIG, etc.
